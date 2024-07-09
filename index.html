@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script>
+    function displayLink(link) {
+  window.open(link);
+}
+    
+  </script>
+
+  <style>
+    .slider {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    .slide-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffd700;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .slide-button:hover {
+      background-color: #ffa500;
+    }
+  </style>
+</head>
+<body>
+    
+
+  <header class="flex justify-center items-center py-4 space-x-40 animate__heartBeat sticky top-0 z-100 bg-white">
+    <div class="flex items-center">
+      <img src="./Assessts//home.jpg" alt="Logo" class="h-12 mr-4">
+      <div class="flex flex-col items-center">
+        <h1 class="text-black font-bold text-3xl text-orange-600">SMARTWEB</h1>
+        <h3 class="tagline text-gray-500 font-bold text-sm tracking-widest">Yourcompany tag line</h3>
+      </div>
+    </div>
+    <nav class="flex space-x-4 -my-2">
+      <a href="#" class="text-white px-3 -my-2 bg-orange-500 hover:bg-orange-700">
+        <img src="C:\Users\kashm\OneDrive\Documents\WEB 4 corvit\Assessts\th.jpg" alt="Home logo" class="h-8 w-8 bg-orange-600">
+        <span class="font-bold text-xl my-3">Home</span>
+      </a>
+      <a href="#" class="text-gray-500 font-bold px-3 py-2 hover:text-orange-500">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.5ScCoOfxgfDnm7teabWjkwAAAA&pid=Api&P=0&h=220" alt="setting" class="h-6 w-8">
+        <span class="my-2 font-bold text-xl my-3 text-mono">Features</span>
+      </a>
+      <a href="#" class="text-gray-500 font-bold px-3 py-2 hover:text-orange-500">
+        <img src="./Assessts//ser.jpg" alt="setting" class="h-6 w-8">
+        <span class="my-2 font-bold text-xl my-3 text-mono">Services</span>
+      </a>
+      <a href="#" class="text-gray-500 font-bold px-3 py-2 hover:text-orange-500">
+        <img src="./Assessts//blogs.jpg" alt="setting" class="h-6 w-8">
+        <span class="my-2 font-bold text-xl my-3 text-mono">Blog</span>
+      </a>
+      <a href="#" class="text-gray-500 font-bold px-3 py-2 hover:text-orange-500">
+        <img src="./Assessts//protfolio.jpg" alt="setting" class="h-6 w-8">
+        <span class="my-2 font-bold text-xl my-3 text-mono">Portfolio</span>
+      </a>
+      <a href="#" class="text-gray-500 font-bold px-3 py-2 hover:text-orange-500">
+        <img src="./Assessts//contact.jpg" alt="setting" class="h-6 w-8">
+        <span class="my-2 font-bold text-xl my-3 text-mono">Contact</span>
+      </a>
+    </nav>
+  </header>
+  
+   
+  </header>
+   <!----2nd part img front-->
+   <div class="slider">
+    <div class="slide active">
+      <img src="./Assessts/03_home_v2.jpeg.jpg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="./Assessts/front2.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="./Assessts/03_home_v2.jpeg.jpg" alt="Image 3">
+    </div>
+  </div>
+  
+
+  <!---Block Part-->
+  <div class="flex  shadow-full mx-48 my-8">
+    <div class="flex flex-col items-center bg-orange-600  border border-orange-500  p-4 h-28 w-56">
+      <h3><img src="./Assessts/responsive layout.jpg" alt="layout" class="h-8 w-8"></h3>
+      <h1 class="text-xl font-bold  font-bold text-white">Responsive Layout</h1>
+      <p class="text-sm text-gray-600 text-white">Manage your account</p>
+    </div>
+  
+    <div class="flex flex-col items-center bg-orange-500  p-4 h-28 w-56">
+      <img src="./Assessts/2ndblock.jpg" alt="html" class="h-8 w-8">
+      <h3 class="text-xl text-white  font-bold mb-1">Html5 / Css3</h3>
+      <p class="text-sm text-gray-600 text-white">For Today And Tomorrow</p>
+    </div>
+  
+    <div class="flex flex-col items-center bg-orange-400 border border-orange-300 p-4 h-28 w-56">
+<img src="./Assessts/3rd.jpg" alt="">   
+   <h3 class="text-lg text-white font-bold ">Easily Customaizeable</h3>
+      <p class="text-sm text-gray-600 text-white">Build the way you Want</p>
+    </div>
+  
+    <div class="flex flex-col items-center bg-yellow-400 border border-yellow-400 p-4 h-28 w-56">
+      <img src="./Assessts/4th.jpg" alt="">   
+         <h3 class="text-lg text-white font-bold ">Unique and Clean</h3>
+            <p class="text-sm text-gray-600 text-white">Stand out from the crowd!</p>
+          </div>
+  </div>
+
+  <!----4th part-->
+  <header class="flex py-8 mx-40 ">
+    <img src="./Assessts/front3.jpg" alt="" class="h-96">
+  
+    <div class="flex flex-col space-y-3  w-1/2 md:w-2/3">
+      <!-- <h2 class="text-2xl font-bold text-gray-800 mx-3 ">Welcome to smartweb</h2> -->
+      <header class="flex   mx-4">
+        <h2 class="text-2xl font-bold mx-3">
+          <span class="text-black">Responsive Web Design
+        </h2>
+        </header>
+      <p class="text-gray-400  text-sm mx-4 font-serif tracking-widest">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, quae possimus incidunt facere itaque eum praesentium ad cumque nesciunt ut dolorum eaque, cum
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, quae possimus incidunt facere itaque eum praesentium ad cumque nesciunt ut dolorum eaque, cum nisi accusantium.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, quos similique culpa tenetur vitae, voluptatem deserunt dignissimos quasi qui busdam provident debitis obcaecati magni ab consequatur necessitatibus  vero. Illum reiciendis eligendi perspiciatis consequuntur animi id saepe no Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, quos similique culpa tenetur vitae, voluptatem deserunt dignissimos quasi qui.
+      </p>
+      <div class="flex flex-row space-x-4 mx-4 my-20 justify-evenly">
+        <div class="flex flex-col items-center h-24  bg-white  px-4 py-2 shadow-full  border-b-2 border-orange-500">
+            <img src="./Assessts/block.jpg" alt="Unique Design" class="w-6 h-6 mb-1">
+            <span class="font-bold text-orange-600">Unique Design</span>
+          </div>
+          
+        <div class="flex flex-col items-center h-24 bg-white border border-gray-200  px-4 py-2">
+          <img src="https://img.icons8.com/?size=80&id=43334&format=png" alt="Clean Code" class="w-6 h-6 mb-1"> <span class="font-bold text-gray-600">Clean Code</span>
+        </div>
+        <div class="flex flex-col items-center h-24 bg-white border border-gray-200  px-4 py-2">
+          <img src="https://image.shutterstock.com/image-vector/support-24-hours-flat-icon-260nw-699687055.jpg" alt="24/7 Support" class="w-6 h-6 mb-1"> <span class="font-bold text-gray-600">24/7 Support</span>
+        </div>
+      </div>
+  </header>
+  <!----bg grey add button-->
+  <div class="flex justify-evenly  items-center h-40 bg-gray-200 px-4">
+    <div class="relative flex items-center -mx-32">
+      <span class="text-orange-700  text-8xl ml-28 mb-4">|</span>
+      <div class="flex flex-col items-center my-12">
+        <h1 class="text-orange-700 font-bold text-xl text-black  ">Are You Impressed With Our Amazing Portfolio?
+        <h5 class="tagline text-gray-600 font-sans text-sm  -ms-40">if you start building your next project With Us.</h5>
+        </h1>
+      </div>
+    </div>
+    <div class="justify-evenly relative overflow-hidden">
+      
+      <div class="flex space-x-2 absolute bottom-0 w-full mb-2">
+        <!-- Other buttons -->
+      </div>
+      <!-- <div class="flex flex-col mt-2">
+         <select name="text" id="" class="text-white font-bold bg-red-700 rounded-full px-2 py-1 mb-2">Hire me
+            <option value="text"><a href="app.html">Hire me</a></option>
+            <option value="text"><a href="app.html">About Us</a></option>
+            <option value="text">protfolio</option>
+
+          </select>
+        </button>
+        <select class="text-white font-bold bg-blue-700 rounded-full px-2 py-1">
+          <option value="text">Skype Call</option>
+          <option value="text">About Us</option>
+          <option value="text">protfolio</option>
+
+        </select>
+      </div>
+    </div> -->
+    <div class="flex flex-col">
+      <div class="relative mb-2">
+        <select id="hireDropdown" class="text-white font-bold bg-orange-700 rounded-full px-4 py-2 appearance-none" onchange="navigateToLink(this.value, 'hire')">
+          <option value="" selected>Hire me</option>
+          <option value="https://www.nsfwgpt.ai/rel/howtobuildyourfirstai">NsfwGPT.ai</option>
+          <option value="https://someotheraiplatform.com">SomeOtherAiPlatform</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+          <svg class="fill-current h-4 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+      <div class="relative">
+        <select id="skypeDropdown" class="text-white font-bold bg-blue-700 rounded-full px-4 py-2 appearance-none" onchange="navigateToLink(this.value, 'skype')">
+          <option value="" selected>Skype Call</option>
+          <option value="https://www.nsfwgpt.ai/rel/howtobuildyourfirstai">NsfwGPT.ai</option>
+          <option value="https://someotheraiplatform.com">SomeOtherAiPlatform</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+  <div class="my-8">
+    <div class="flex justify-between items-center">
+      <h1 class="text-lg font-bold text-black mx-44">Why we provide?</h1>
+      <div class="flex mr-40">
+        <button class="text-md font-bold bg-gray-700 text-white hover:bg-gray-300 h-5 w-6">
+          <h1 class="font-bold text-xl -my-3"><</h1>
+        </button>
+        <button class="text-md font-bold bg-orange-700 text-white hover:bg-gray-300 h-5 w-6">
+          <h1 class="font-bold text-xl -my-3">></h1>
+        </button>
+      </div>
+    </div>
+    <div class="w-96 mx-32 flex my-5">
+      <div class="border border-1 border-orange-500">
+        <div class="w-96 bg-orange-500"></div>
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-96 bg-gray-500"></div>
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-80 bg-gray-500"></div>
+      </div>
+    </div>
+  </div>
+  <!----four blocks----->
+  <div class="flex flex-row space-x-8 mx-40 my-16">
+    <div class="flex flex-col items-center h-56  w-56 bg-white px-4 py-2 shadow-lg border-b-2 border-orange-500">
+      <img src="./Assessts/b1.jpg" alt="Unique Design" class="w-10 h-10 mb-1 my-4">
+      <span class="font-bold text-black text-lg my-5">Responsive Design</span>
+      <ul class="text-gray-500  text-xs font-sans   ">
+        <li class="mx-6">Lorem ipsum dolor sit.</li>
+        <li class="mx-3 ">Lorem ipsum dolor sit amet .
+        </li>
+        <li class="mx-4">Lorem, ipsum dolor.</li>
+      </ul>
+     
+    </div>
+    <div class="flex flex-col items-center h-56  w-56 bg-white px-4 py-2 shadow-lg border-b-2 border-orange-500">
+      <img src="./Assessts/b2.jpg" alt="Unique Design" class="w-10 h-10 mb-1 my-4">
+      <span class="font-bold text-black text-lg my-5">Web development</span>
+      <ul class="text-gray-500  text-xs font-sans   ">
+        <li class="mx-6">Lorem ipsum dolor sit.</li>
+        <li class="mx-3 ">Lorem ipsum dolor sit amet .
+        </li>
+        <li class="mx-4">Lorem, ipsum dolor.</li>
+      </ul>
+     
+    </div>
+    <div class="flex flex-col items-center h-56  w-56 bg-white px-4 py-2 shadow-lg border-b-2 border-orange-500">
+      <img src="./Assessts/b3.jpg" alt="Unique Design" class="w-10 h-10 mb-1 my-4">
+      <span class="font-bold text-black text-lg my-5">Programming</span>
+      <ul class="text-gray-500  text-xs font-sans   ">
+        <li class="mx-6">Lorem ipsum dolor sit.</li>
+        <li class="mx-3 ">Lorem ipsum dolor sit amet .
+        </li>
+        <li class="mx-4">Lorem, ipsum dolor.</li>
+      </ul>
+     
+    </div>
+    <div class="flex flex-col items-center h-56  w-56 bg-white px-4 py-2 shadow-lg border-b-2 border-orange-500">
+      <img src="./Assessts/b4.jpg" alt="Unique Design" class="w-10 h-10 mb-1 my-4">
+      <span class="font-bold text-black text-lg my-5">UX Design</span>
+      <ul class="text-gray-500  text-xs font-sans   ">
+        <li class="mx-6">Lorem ipsum dolor sit.</li>
+        <li class="mx-3 ">Lorem ipsum dolor sit amet .
+        </li>
+        <li class="mx-4">Lorem, ipsum dolor.</li>
+      </ul>
+     
+    </div>
+  
+   
+  </div>
+  <!----our latest project-->
+  <div class="my-8">
+    <div class="flex justify-between items-center">
+      <h1 class="text-lg font-bold text-black mx-44">Our Latest Projects</h1>
+      <div class="flex mr-40">
+        <button class="text-md font-bold bg-gray-700 text-white hover:bg-gray-300 h-5 w-6">
+          <h1 class="font-bold text-xl -my-3"><</h1>
+        </button>
+        <button class="text-md font-bold bg-orange-700 text-white hover:bg-gray-300 h-5 w-6">
+          <h1 class="font-bold text-xl -my-3">></h1>
+        </button>
+      </div>
+    </div>
+    <div class="w-96 mx-32 flex my-5">
+      <div class="border border-1 border-orange-500">
+        <div class="w-96 bg-orange-500"></div>
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-96 bg-gray-500"></div>
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-80 bg-gray-500"></div>
+      </div>
+    </div>
+  </div>
+  <div class="my-14 justify-evenly mx-32 flex space-x-4">
+         
+<img src="./Assessts/web design.jpg" alt="">
+<img src="./Assessts/glass.jpg" alt="">
+<img src="./Assessts/img.jpg" alt="">
+
+
+  </div>
+
+  <div class="my-4">
+    <div class="flex justify-between items-center">
+      <h1 class="text-lg font-bold text-black mx-40">Happy Client Say?</h1>
+   
+        <div class="flex mr-40">
+            <button class=" text-md font-bold  bg-gray-700  text-white hover:bg-gray-300 h-5 w-6">
+                <h1 class="font-bold text-xl -my-3">
+                    <
+                </h1>
+               </button>
+              
+          <button class=" text-md font-bold  bg-orange-700  text-white hover:bg-gray-300 h-5 w-6">
+           <h1 class="font-bold text-xl -my-3">></h1>
+          </button>
+          
+          
+      </div>
+      
+   </div>
+    
+    </div>
+    <div class="w-96 mx-32   flex my-3">
+      <div class="border border-1 border-orange-500">
+        <div class="w-96 bg-orange-500"></div>
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-96 bg-gray-500"></div>
+       
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-96 bg-gray-500"></div>
+      </div>
+    </div>
+  </div>
+<!----2 div-->
+<div class="flex my-8 mx-32">
+<div class="w-96 border border-gray-300 bg-white p-4 rounded-md shadow-md hover:shadow-lg">  
+    <h1 class="mx-8 text-sm font-bold text-gray-500">Lorem, ipsum dolor sit amet consectetur </h1>
+    
+        <h1  class="mx-12 text-sm font-bold text-gray-500"> Doloribus blanditiis fugiat </h1>
+  <p class="text-orange-700 font-bold mx-24">John Doe.</p>    
+    <h5 class="text-sm text-gray-500 mx-24">Internet Marker</h5>
+
+</div>
+<div class="w-96 bg-white p-4 rounded-md mx-8 shadow-md hover:shadow-lg">    <h1 class="mx-8 text-sm font-bold text-gray-500">Lorem, ipsum dolor sit amet consectetur </h1>
+    
+    <h1  class="mx-12 text-sm font-bold text-gray-500"> Doloribus blanditiis fugiat </h1>
+<p class="text-orange-700 font-bold mx-24">John Smith.</p>    
+<h5 class="text-sm text-gray-500 mx-24">Internet Marker</h5>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+  <!----Client We'vs Worked With so Far-->
+  <div class="my-4">
+    <div class="flex justify-between items-center">
+      <h1 class="text-lg font-bold text-black mx-40">Client We'vs Worked With so Far</h1>
+   
+        <div class="flex mr-40">
+            <button class=" text-md font-bold  bg-gray-700  text-white hover:bg-gray-300 h-5 w-6">
+                <h1 class="font-bold text-xl -my-3">
+                    <
+                </h1>
+               </button>
+              
+          <button class=" text-md font-bold  bg-orange-700  text-white hover:bg-gray-300 h-5 w-6">
+           <h1 class="font-bold text-xl -my-3">></h1>
+          </button>
+          
+          
+      </div>
+      
+   </div>
+    
+    </div>
+    <div class="w-96 mx-32   flex my-3">
+      <div class="border border-1 border-orange-500">
+        <div class="w-96 bg-orange-500"></div>
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-96 bg-gray-500"></div>
+       
+      </div>
+      <div class="border border-1 bg-gray-500">
+        <div class="w-96 bg-gray-500"></div>
+      </div>
+    </div>
+  </div>
+  <!---4 blocks-->
+  <div class="flex flex-row space-x-4 mx-32 my-10 space-x-4">
+    
+      
+    <div class="flex flex-col items-center h-28 w-64 bg-white border border-gray-200  px-4 py-2">
+        <span class="flex items-center space-x-2 py-7">
+            <img src="./Assessts/audio.jpg" alt="24/7 Support" class="w-8 h-8 ml-2">
+            <span class="font-bold text-gray-600 text-2xl font-sans ">audiojungle</span>
+          </span>
+    </div>
+    <div class="flex flex-col  items-center h-28 w-64 bg-white border border-gray-200  px-4 py-2">
+     
+        <span class="flex items-center py-6">
+            <img src="./Assessts/theme.jpg" alt="24/7 Support" class="w-8 h-8 ml-2">
+            <span class="font-bold text-black text-xl">themeforest</span>
+          </span>
+       
+      </div>
+      <div class="flex flex-col items-center h-28 w-64 bg-white border border-gray-200  px-4 py-2">
+        <span class="flex items-center py-6">
+            <img src="./Assessts/audio.jpg" alt="24/7 Support" class="w-8 h-8 ml-2">
+            <span class="font-bold text-gray-600 text-xl">audiojungle</span>
+          </span>
+       
+      </div>
+    <div class="flex flex-col items-center h-28 w-64 bg-white border border-gray-200  px-4 py-2">
+        <span class="flex justify-center py-6">
+            <img src="./Assessts/graphic.jpg" alt="24/7 Support" class="w-8 h-8 ml-2">
+            <span class=" text-gray-600 font-wide  text-2xl  ">graphiccriver</span>
+          </span>
+          
+    </div>
+  </div>
+  <footer>
+    <div class="bg-neutral-700 h-52 py-8 hover:bg-gray-600">
+      <div class="flex py-1 mx-56 space-x-40">
+        <h6 class="text-sm text-neutral-400 font-bold">STAY CONNECT WITH US </h6>
+        <h6 class="text-sm text-neutral-400 font-bold">CONTACT INFO </h6>
+        </div>
+        <div class=" mx-56 flex py-1">
+          <div class="border border-1 border-neutral-600">
+            <div class="w-72 bg-neutral-600"></div>
+          </div>
+         
+        </div>
+        <div class=" mx-96 px-40 flex -my-1 ">
+          <div class="border border-1 border-neutral-600">
+            <div class="w-72 bg-neutral-600"></div>
+          </div>
+         
+        </div>
+      
+    <div class="justify-center items-center">
+    <div class="flex space-x-2 mx-56 my-3  ">
+    <a href="#"><button class="bg-orange-500 text-white font-bold h-8 w-8 rounded-full">f</button></a>
+    <button class="rounded-full bg-neutral-300  w-8">
+      <img src="https://img.icons8.com/?size=48&id=1bj89U1Ansyb&format=png" alt="" class="h-5 px-2 ">
+    </button>
+    <button class="rounded-full bg-neutral-300  w-8">
+      <img src="https://img.icons8.com/?size=48&id=nHfqdbzzOu8v&format=png" alt="" class="h-5 px-2 ">
+    
+    </button>
+    <button class="rounded-full bg-neutral-300  w-8">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.lK6cgTPmCFkkDstnqdE6UgHaHa&pid=Api&P=0&h=220" alt="" class="h-5 px-2 ">
+    
+    </button>
+    <button class="rounded-full bg-neutral-300  w-8">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.LKqhdSDlLwqivERFPsNMbwHaJu&pid=Api&P=0&h=220" alt="" class="h-5 px-2 ">
+    
+    </button>
+    </div>
+    <div class="mx-96  -my-9 flex space-x-28 ">
+    
+    
+      <div class=" text-white py-4 px-10 flex justify-between items-center -my-4 mx-28">
+        <div class="flex items-center mx-3 ">
+        <!-- <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M0 4v16l12-8z"/>
+        </svg> -->
+       
+        <img   class="fill-current h-6 w-6 rounded-full" src="https://tse3.mm.bing.net/th?id=OIP.CKTqGACDTe89rNJ9qJfZiAHaHa&pid=Api&P=0&h=220" alt="" >
+    
+        <span class="mx-1 text-neutral-400">77777modernAvenueUK</span>
+      </div>
+      <div class="flex items-center mx-4">
+        <img   class="fill-current h-6 w-6 rounded-full" src="https://tse4.mm.bing.net/th?id=OIP.NipXezTfLJaFskboohorrQHaHa&pid=Api&P=0&h=220" alt="" >
+    
+        <span class="mx-1 text-neutral-400">+1234567890</span>
+      </div>
+      <div class="flex items-center mx-4 ">
+        <img   class="fill-current h-6 w-6 rounded-full" src="https://tse4.mm.bing.net/th?id=OIP.Axc1HC6uoz7Vp7PGLXGS-gHaHa&pid=Api&P=0&h=220" alt="" >
+    
+        <span class="mx-1 text-neutral-400">email@yourcompany.com</span>
+      </div>
+     
+    </div>
+    
+    
+    </div>
+    <div class="my-16 mx-1">
+      <div class="w-96    flex my-3">
+        <div class="border border-1 border-neutral-600">
+          <div class="w-96 border-neutral-600"></div>
+        </div>
+        <div class="border border-1 border-neutral-600">
+          <div class="w-96 border-neutral-600"></div>
+         
+        </div>
+        <div class="border border-1 border-neutral-600">
+          <div class="w-96 border-neutral-600"></div>
+        </div>
+        <div class="border border-1 border-neutral-600">
+          <div class="w-40 border-neutral-600"></div>
+        </div>
+        
+      </div>
+      <div class="flex py-1 mx-56 space-x-40">
+        <h6 class="text-sm text-neutral-400 font-bold"> <span>@2017 copyright</span> 
+         <span class=" text-neutral-400text-sm font-bold"> createcurix</span>
+        <span class="text-sm text-neutral-400 font-bold"> All right reserve</span></h6>
+        <h6 class="text-sm text-neutral-400 font-bold">Home| Features| Blogs| protfolio| privacy policy|  Terms | Contact</h6>
+        </div>
+        </div>
+        
+    </div>
+    
+    </div>
+    
+    
+    </footer>
+
+
+
+
+  <script src="add.js"></script>
+  </body>
+  </html>
